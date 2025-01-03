@@ -23,7 +23,7 @@ def read_file():
 def write_file_x():
     file = None
     try:
-        file = open(file_path, 'x')
+        file = open(file_path, 'x', encoding="utf-8")
         file.write("내용1")
     except FileExistsError as e:
         # print(e)
@@ -33,8 +33,6 @@ def write_file_x():
         print(e)
     finally:
         if file: file.close()
-
-# 파일 쓰기('a') -> 파일 존재x -> 에러
 
 if __name__ == "__main__":
     # read_file()
